@@ -104,7 +104,7 @@ addEventListener("DOMContentLoaded", () => {
 function loadsong(index) {
   song.src = songs[index].getAttribute("song-src");
   song.load();
-  bg_cover.style.backgroundImage = `url(${location.protocol}//${location.host}/${songs[index].getAttribute("cover-src").replaceAll(" ", "%20")})`;
+  bg_cover.style.backgroundImage = `url(${location.protocol}//${location.host}${songs[index].getAttribute("cover-src").replaceAll(" ", "%20")})`;
   song_cover.setAttribute("src", `${songs[index].getAttribute("cover-src")}`);
   info_song_name.textContent = song_name[index].textContent;
   artist.textContent = songs[index].getAttribute("artiste");
@@ -187,7 +187,7 @@ function check_shuffle() {
   if (shuffle.classList.contains("active")) {
     do {
       index = Math.floor(Math.random() * songs.length);
-    }while(index == current_song)
+    } while (index == current_song)
     current_song = index;
   }
 }
@@ -250,7 +250,7 @@ function search_display() {
 }
 
 // Load initial settings and data
-function infoLoad(){
+function infoLoad() {
 
   // Check and apply the saved theme
   check_theme();

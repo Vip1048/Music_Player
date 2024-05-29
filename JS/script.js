@@ -104,7 +104,7 @@ addEventListener("DOMContentLoaded", () => {
 function loadsong(index) {
   song.src = songs[index].getAttribute("song-src");
   song.load();
-  bg_cover.style.backgroundImage = `url(${location.protocol}//${location.host}${songs[index].getAttribute("cover-src").replaceAll(" ", "%20")})`;
+  bg_cover.style.backgroundImage = `url(${songs[index].getAttribute("cover-src").replaceAll(" ", "%20")})`;
   song_cover.setAttribute("src", `${songs[index].getAttribute("cover-src")}`);
   info_song_name.textContent = song_name[index].textContent;
   artist.textContent = songs[index].getAttribute("artiste");

@@ -281,7 +281,7 @@ function infoLoad() {
   if (localStorage.repeat) repeat_toggle();
 
   // Add click event to display search bar on small screens
-  if (innerWidth <= 375) search.addEventListener("click", search_display);
+  if (innerWidth <= 375) search_icon.addEventListener("click", search_display);
 
   // Adjust progress bar width on window resize
   window.addEventListener("resize", () => {

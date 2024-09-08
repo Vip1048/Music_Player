@@ -1,143 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="Pictures/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="CSS/style.css">
-  <script src="https://kit.fontawesome.com/48918701e6.js" crossorigin="anonymous"></script>
-  <title>IKBRYT</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKBRYT Login</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="icon" type="image/x-icon" href="music-player/images/favicon.ico">
 </head>
 <body>
-  <div class="container">
-    <!-- background Song Cover -->
-    <div class="bg-cover"></div>
-    <!-- Header Start -->
-    <header>
-      <div class="logo">
-      <i class="fi fi-rr-waveform"></i>
+    <div class="container">
+        <h2 class="login-title">Log in</h2>
+    
+        <form action="#" method="post" name="authentication" class="login-form" id="authentication" onsubmit="return Verify()">
+        
+            <div>
+                <label for="username">Username</label>
+                <input
+                    id="username"
+                    type="text"
+                    placeholder="NAME"
+                    name="username"
+                    required
+                    />
+            </div>
+        
+            <div>
+                <label for="password">Password </label>
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="password"
+                    name="password"
+                    required
+                    />
+            </div>
+    
+            <button class="btn btn--form" type="submit" value="Log in">
+                Log in
+            </button>
+        </form>
     </div>
-      <div class="search">
-        <i class="fi fi-br-search"></i>
-        <input id="search" placeholder="Search for a song">
-      </div>
-      <div class="theme ele">
-        <i class="fi fi-br-sun"></i>
-        <i class="fi fi-br-moon-stars"></i>
-      </div>
-      <i class="settings fi fi-rs-settings ele"></i>
-      <div class="bell ele">
-        <i class="fi fi-rr-bell"></i>
-      </div>
-      
-      <img src="Pictures/pfp.jpg" alt="Profil-pic" class="ele">
-    </header>
-    <!-- Header End -->
-    <!-- Player Start -->
-    <div class="player">
-      <!-- Section Start -->
-      <section>
-        <!-- Control Start -->
-        <div class="cover-control">
-          <img class="song-cover" src="" alt="song_cover">
-          <div class="control">
-            <div class="shuffle">
-              <i class="fi fi-rr-shuffle"></i>
-            </div>
-            <i class="fi fi-ss-step-backward backward"></i>
-            <div class="play">
-              <i class="fi fi-ss-play"></i>
-            </div>
-            <i class="fi fi-ss-step-forward forward"></i>
-            <i class="fi fi-rr-arrows-repeat repeat"></i>
-          </div>
-        </div>
-        <!-- Control End -->
-        <!-- List Start -->
-        <div class="song-list">
-          <div class="infos">
-            <div class="song-name">Akanesasu</div>
-            <div class="song-info">
-              <span class="artist">Aimer</span>
-              <i class="fi fi-ss-bullet"></i>
-              <span class="album">Blanc</span>
-            </div>
-          </div>
-          <ul class="list">
-            <li artist="VIP" album="Blanc" song-src="Songs/EP 1.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 1</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Shiroiro Kagerou" song-src="Songs/EP 2.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 2</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Abyss" song-src="Songs/EP 3.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 3</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Egg in the Backseat" song-src="Songs/EP 4.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 4</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Kokoroe" song-src="Songs/EP 5.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 5</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Angel Face" song-src="SSongs/EP 6.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 6</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Zankyosanka" song-src="Songs/EP 7.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 7</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Black Bird" song-src="Songs/EP 8.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 8</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Dawn" song-src="Songs/EP 9.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 9</span>
-              <span class="duration"></span>
-            </li>
-            <li artist="VIP" album="Dawn" song-src="Songs/EP 10.m4a" cover-src="Pictures/IMG_20240902_151937_288.jpg">
-              <span class="index">#</span>
-              <span class="name">EPISODE 10</span>
-              <span class="duration"></span>
-            </li>
-
-
-
-
-
-
+    <script>
+        //Submit Button
+        function Verify() {
+            var userRef = "IKBRYT";
+            var passRef = "IKBRYT";
             
-          </ul>
-        </div>
-        <!-- List End -->
-      </section>
-      <!-- Section End -->
-      <!-- Progress_Bar Start -->
-      <div class="progress_bar">
-        <span class="current_duration">0:00</span>
-        <div class="bar">
-          <div class="fill_bar"></div>
-        </div>
-        <span class="duration">0:00</span>
-      </div>
-      <!-- Progress_Bar End -->
-    </div>
-    <!-- Player End -->
-  </div>
-  <script src="JS/script.js"></script>
+            var userRef = "IKBRYT0";
+            var passRef = "IKBRYT0";
+
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            
+            if (user === userRef && pass === passRef) {
+                alert("Welcome to IKBRYT");
+                window.location.href = "home.html"; // Redirect to home.html
+                return false; // Prevent form submission (optional)
+            } else {
+                alert("Incorrect username or password!");
+                return false; // Prevent form submission
+            }
+        };
+    </script>
 </body>
 </html>
